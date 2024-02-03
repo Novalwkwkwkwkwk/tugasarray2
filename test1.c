@@ -6,12 +6,10 @@ int main() {
 
     printf("Array yang duplikat = ");
 
-    // Array untuk melacak elemen yang sudah dicetak
     int cetakDuplikat[n];
     int jumlahCetakDuplikat = 0;
 
     for (int i = 0; i < n; i++) {
-        // Periksa apakah elemen sudah dicetak sebelumnya
         int sudahCetak = 0;
         for (int k = 0; k < jumlahCetakDuplikat; k++) {
             if (arr[i] == cetakDuplikat[k]) {
@@ -21,7 +19,7 @@ int main() {
         }
 
         
-        if (!sudahCetak) {
+        if (sudahCetak == 0) {
             for (int j = i + 1; j < n; j++) {
                 if (arr[i] == arr[j]) {
                     printf("%d ", arr[i]);
